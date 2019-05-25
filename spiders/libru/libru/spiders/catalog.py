@@ -7,11 +7,15 @@ class CatalogSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            'http://az.lib.ru/a/abramowich_n_j/text_1914_hristos_dostoevskago_oldorfo.shtml',
+            'http://az.lib.ru/d/dostoewskij_f_m/',
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
 
-    def parse(self, response):
+    def parse_text(self, response):
         yield LibruItem(file_urls=[response.urljoin(
             response.xpath('//a[contains(text(), "FB2")]').css('a::attr(href)').extract_first())])
+
+    def parse(self, response):
+        for text_ref in response.xpath('//a[contains(@href, "text_")]').css('a::attr(href)').extract():
+            yield response.follow(text_ref, self.parse_text)
