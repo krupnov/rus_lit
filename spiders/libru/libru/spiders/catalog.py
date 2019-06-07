@@ -7,7 +7,7 @@ class CatalogSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            'http://az.lib.ru/d/dostoewskij_f_m/',
+            'http://az.lib.ru/p/pushkin_a_s/',
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
