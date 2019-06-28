@@ -33,7 +33,7 @@ def convert_text(text):
         print('Got ya!')
     else:
         converted = converted[:int(len(converted) * .7)]
-        print('No luck. Take 2/3 of text')
+        print('No luck. Take .7 of text')
 
     converted = [s for s in converted if len(s) > 0]
     converted = converted[20::]
