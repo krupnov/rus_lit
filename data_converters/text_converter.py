@@ -80,6 +80,7 @@ def main():
 main()
 
 
-# python3 ./text_converter.py -d ./converted pushkin_a_s-text_0030.fb2 pushkin_a_s-text
-# _0170.fb2 pushkin_a_s-text_1836_poe.fb2 pushkin_a_s-text_0040.fb2 pushkin_a_s-text_0422.fb2 pushkin_a_s-text_0425.fb2
+# python3 ./text_converter.py -d ./converted pushkin_a_s-text_0030.fb2
+# pushkin_a_s-text_0170.fb2 pushkin_a_s-text_1836_poe.fb2
+# pushkin_a_s-text_0040.fb2 pushkin_a_s-text_0422.fb2 pushkin_a_s-text_0425.fb2
 # pushkin_a_s-text_0430.fb2 pushkin_a_s-text_0426.fb2
